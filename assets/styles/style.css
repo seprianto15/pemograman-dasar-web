@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+main {
+    padding: 5px;
+    overflow: auto;
+}
+
+nav {
+    height: 90px;
+    background: #03506f;
+}
+
+nav img {
+    width: 240px;
+    position: absolute;
+    top: 15px;
+    left: 7%;
+    cursor: pointer;
+}
+
+nav ul {
+    float: right;
+    margin-right: 25px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 95px;
+    margin: 0 16px;
+}
+
+nav ul li a {
+    position: relative;
+    color: #EEEEEE;
+    font-size: 18px;
+    padding: 5px 0;
+    text-transform: uppercase;
+}
+
+nav ul li a:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: #EEEEEE;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .3s linear;
+}
+
+nav ul li a:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+label #button, label #cancel {
+    color: #EEEEEE;
+    font-size: 30px;
+    float: right;
+    line-height: 95px;
+    margin-right: 47px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.jumbotron {
+    font-size: 20px;
+    padding: 90px;
+    margin-bottom: 10px;
+    background-color:#34626c;
+    text-align: center;
+    color: #f8f1f1;
+ }
+
+.content {
+    width: 100%;
+    margin: 10px auto 0;
+    display: table;
+}
+
+.card-genre h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.card-genre p {
+    text-align: center;
+}
+
+.center {
+    display: table-cell;
+    padding: 10px;
+    width: 33,3%;
+    text-align: center;
+    border-left: 10px;
+    border-right: 10px;
+    transition: .3s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.center h3,p {
+    margin: 10px 0;
+}
+
+.fitur-image {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+ }
+ 
+.novel {
+    width: 25%;
+    padding: 10px;
+    float: left;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.novel-image {
+    width: 80%;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+ }
+
+.novel-image:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+ }
+
+.card-rekomendasi h2{
+    margin: 20px 0;
+    text-align: center;
+}
+
+.card-rekomendasi p {
+    text-align: center;
+}
+
+.profile header {
+   text-align: center;
+}
+
+.profile header img {
+    height: 300px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.profile header h2 {
+    margin: 20px 10px;
+}
+
+footer {
+    padding: 20px;
+    color: #EEEEEE;
+    background: #03506f;
+    text-align: center;
+}
+
+
+@media (max-width: 1000px) {
+    label #button {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #30475e;
+        top: 90px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+    #check:checked ~ label #button {
+        display: none;
+    }
+    #check:checked ~ label #cancel {
+        display: block;
+    }
+    .content {
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+    }
+    .center {
+        width: 100%;
+        display: block;
+        margin: 10px 0;
+        border: none;
+        box-sizing: border-box;
+    }
+    .card h2,p{
+        margin: 0;
+    }
+    .center h3 {
+        margin: 10px;
+    }
+    .novel {
+        width: 100%;
+        display: block;
+        margin: 10px 0;
+        border: none;
+        box-sizing: border-box;
+    }
+    .novel-image {
+        width: 50%;
+    }
+
+    aside {
+        width: 100%;
+        padding: 0;
+    }
+
+}
